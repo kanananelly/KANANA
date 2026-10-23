@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FORMS</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label>NAME</label>
+        <input type=" text" id="name" name=" name" required />
+        <label> PHONE NUMBER</label>
+        <input type=" tel" id="number" name="number" required />
+        <label> EMAIL</label>
+        <input
+          type=" email"
+          id="email"
+          name=" email"
+          placeholder="name@gmail.com"
+        />
+      </div>
+      <div>
+        <label> AGE</label>
+        <input type=" number" id="age" name="age" />
+        <label> DATE OF BIRTH</label>
+        <input type="date" id=" date" name="date" />
+      </div>
+      <fieldset>
+        <legend>AVAILABLE DESTINATIONS</legend>
+        <label for="destination">CHOOSE DESTINATION </label>
+        <select id="destination" name="destination">
+          <option value="MM/8/26">Maasai mara</option>
+          <option value="TE/12/26">Tsavo east</option>
+          <option value="DN/01/27">Diani</option>
+          <option value="SM/05/27">Samburu</option>
+        </select>
+      </fieldset>
+      <div>
+        <label> TELL US ABOUT YOUR EXPECTATIONS </label>
+        <textarea type="text" id="expectations" name="expectations"></textarea>
+      </div>
+      <button type="submit"> submit 
+
+      </button>
+    </form>
+  </body>
+</html>

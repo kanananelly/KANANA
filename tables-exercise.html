@@ -1,0 +1,264 @@
+<!doctype html>
+<!--
+=====================================================================
+  inTEN Web Programming · HTML Tables Exercise
+
+  HOW TO USE THIS FILE
+  1. Save this file inside your "web-course" folder.
+  2. Open it with Live Server.
+  3. Work through the LEVELS in order. Each level is harder.
+     Save (Ctrl + S) after every task and check the browser.
+
+  TABLE TAGS YOU WILL NEED
+    <table>    the whole table
+    <caption>  the table's title (first thing inside <table>)
+    <thead>    the header rows
+    <tbody>    the main data rows
+    <tfoot>    summary rows at the bottom (totals, highest, etc.)
+    <tr>       one row
+    <th>       a header cell (bold and centred)
+    <td>       a normal data cell
+    colspan="2"  makes a cell stretch across 2 COLUMNS
+    rowspan="2"  makes a cell stretch down 2 ROWS
+
+  GOLDEN RULE: HTML builds tables ROW BY ROW, left to right.
+  Every row must add up to the same number of columns.
+=====================================================================
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tables Exercise - Change me to your name</title>
+    <!-- This small style makes table lines visible. You will learn CSS next week. -->
+    <style>
+      table {
+        border-collapse: collapse;
+        margin-bottom: 30px;
+      }
+      th,
+      td {
+        border: 1px solid #333;
+        padding: 6px 12px;
+      }
+      caption {
+        font-weight: bold;
+        padding: 6px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>HTML Tables Exercise</h1>
+
+    <!--
+    ============================ LEVEL 1 ============================
+    TASK 1 · Matatu fares (10 min)
+    Build this table. The first row is the header row (use <th>).
+
+      Route                  | Distance (km) | Fare (KSh)
+      -----------------------|---------------|-----------
+      Town - Stadium         | 3             | 50
+      Town - Hospital        | 5             | 70
+      Town - University      | 12            | 120
+      Town - Airport         | 20            | 200
+
+    Then add a <caption> that says:  Matatu Fares from Town
+    CHECK: 5 rows in total, 3 cells in every row.
+  -->
+
+    <h2>Level 1 · Matatu fares</h2>
+    <h1>Matatu fares From Town</h1>
+    <table>
+      <tr>
+        <th>Route</th>
+        <th>Distance(km)</th>
+        <th>Fare(KSH)</th>
+      </tr>
+      <tr>
+        <td>Town-Stadium</td>
+        <td>3</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Town-Hospital</td>
+        <td>5</td>
+        <td>70</td>
+      </tr>
+      <tr>
+        <td>Town-University</td>
+        <td>12</td>
+        <td>120</td>
+      </tr>
+      <tr>
+        <td>Town-Airport</td>
+        <td>20</td>
+        <td>200</td>
+      </tr>
+    </table>
+
+    <!--
+    ============================ LEVEL 2 ============================
+    TASK 2 · From words to a table (15 min)
+    Read this report, then turn it into a table.
+
+      "Achieng scored 78 in Maths, 65 in English and 82 in Science.
+       Brian scored 54 in Maths, 71 in English and 60 in Science.
+       Chebet scored 90 in Maths, 88 in English and 85 in Science.
+       Daudi scored 67 in Maths, 59 in English and 73 in Science."
+
+    Your table must have:
+      - a <caption>: Form 3 End-of-Term Marks
+      - columns: Student | Maths | English | Science | Total
+      - the header row inside <thead>
+      - the four students inside <tbody>
+      - a final "Highest" row inside <tfoot> showing the highest mark
+        in each column (work it out yourself!)
+    TIP: you must calculate each student's Total yourself.
+  -->
+
+    <h2>Level 2 · Exam marks</h2>
+    
+
+    <!--
+    ============================ LEVEL 3 ============================
+    TASK 3 · Merge across columns with colspan (10 min)
+    Build the Sports Day programme below. Some activities are for
+    BOTH boys and girls, so ONE cell stretches across 2 columns.
+
+      Time   | Boys                    | Girls
+      -------|-------------------------|-----------
+      8:00   | Assembly and opening  (both - one merged cell)
+      9:00   | Football                | Netball
+      11:00  | Athletics             (both - one merged cell)
+      1:00   | Volleyball              | Handball
+      3:00   | Prize giving          (both - one merged cell)
+
+    Use:  <td colspan="2">Assembly and opening</td>
+    QUESTION: a merged row only has 2 <td> tags. Why does it still fit
+    under 3 headings? Write your answer in a <p> under the table.
+  -->
+
+    <h2>Level 3 · Sports Day programme</h2>
+
+    <!--
+    TASK 4 · Merge down rows with rowspan (10 min)
+    Build this classroom duty roster. Each day has 2 duties, so the
+    DAY cell stretches DOWN 2 rows.
+
+      Day       | Duty               | Student
+      ----------|--------------------|---------
+      Monday    | Sweep the floor    | Achieng
+      (merged)  | Clean the board    | Brian
+      Tuesday   | Sweep the floor    | Chebet
+      (merged)  | Clean the board    | Daudi
+      Wednesday | Sweep the floor    | Esther
+      (merged)  | Clean the board    | Faith
+
+    Use:  <td rowspan="2">Monday</td>
+    IMPORTANT: the SECOND row of each day has only 2 cells, because the
+    day cell from the row above is already filling the first column.
+  -->
+
+    <h2>Level 3 · Duty roster</h2>
+
+    <!--
+    ============================ LEVEL 4 ============================
+    TASK 5 · Two-row header (15 min)
+    Build this school uniform price list. The header has TWO rows:
+    "Item" stretches DOWN 2 rows, and "Price (KSh)" stretches ACROSS
+    2 columns, with "Small" and "Large" underneath it.
+
+      +----------+---------------------+
+      |          |     Price (KSh)     |
+      |   Item   +----------+----------+
+      |          |  Small   |  Large   |
+      +----------+----------+----------+
+      | Shirt    |   450    |   550    |
+      | Trousers |   800    |   950    |
+      | Sweater  |  1200    |  1400    |
+      +----------+----------+----------+
+
+    HINT: header row 1 has 2 cells (one with rowspan, one with colspan).
+          header row 2 has only 2 cells: Small and Large.
+  -->
+
+    <h2>Level 4 · Uniform price list</h2>
+
+    <!--
+    ============================ LEVEL 5 ============================
+    TASK 6 · Fix the broken table (10 min)
+    The table below has 6 MISTAKES. Find and fix them all.
+    HINTS: look at the tag names, the closing tags, the order of tags,
+    and count the cells in every row.
+  -->
+
+    <h2>Level 5 · Fix the bugs</h2>
+
+    <!-- - - - - - - - - - - START OF BROKEN CODE - - - - - - - - - - -->
+    <table>
+      <tr>
+        <th>County</th>
+        <th>Capital</th>
+        <th>Region</th>
+      </tr>
+      <caption>
+        Some Kenyan Counties
+      </caption>
+      <tr>
+        <td>Meru</td>
+        <td>Meru</td>
+        <td>Eastern</td>
+      </tr>
+      <tr>
+        <td>Nakuru</td>
+        <td>Nakuru</td>
+        <td></td>
+        <td>Rift Valley</td>
+      </tr>
+      <tr>
+        <td>Kisumu</td>
+        <td>Kisumu</td>
+      </tr>
+      <tr>
+        <td>Mombasa</td>
+        <th>Mombasa</th>
+        <td>Coast</td>
+      </tr>
+
+      <tr>
+        <td colspan="2">Nyeri</td>
+        <td>Nyeri</td>
+        <td>Central</td>
+      </tr>
+    </table>
+    <!-- - - - - - - - - - - END OF BROKEN CODE - - - - - - - - - - - -->
+
+    <!--
+    ===================== STRETCH TASKS (fast finishers) =====================
+
+    TASK 7 · Accessibility with scope (5 min)
+    In your Level 2 marks table, add scope="col" to every column
+    header <th>, and change each student's name cell into
+    <th scope="row">. This tells screen readers which header belongs
+    to which cell.
+
+    TASK 8 · Design your own (15 min)
+    Make a table of something YOU care about: your favourite football
+    team's last 5 results, a weekly budget, or your family's chores.
+    It must use: <caption>, <thead>, <tbody>, and at least ONE
+    colspan or rowspan.
+  --></body>
+</html>
+
+<!--
+=====================================================================
+  BEFORE YOU FINISH, CHECK:
+  [ ] Every table has a <caption>
+  [ ] Every row in each table adds up to the same number of columns
+      (remember: colspan="2" counts as 2)
+  [ ] Your totals and "Highest" row in Level 2 are correct
+  [ ] All 6 bugs in Level 5 are fixed
+  [ ] Bonus: paste your code into https://validator.w3.org/#validate_by_input
+      and fix any errors it shows
+=====================================================================
+-->
