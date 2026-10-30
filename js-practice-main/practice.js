@@ -124,9 +124,9 @@ console.log("--- Task 5 ---");
 //    Counties in the last week: 2
 // ---------------------------------------------------------------------
 const studentsLeft = 23 % 4;
-const countiesVisit= 47 % 5
-console.log("students left over:"+studentsLeft)
-console.log("counties in the last week" +countiesVisit)
+const countiesVisit = 47 % 5;
+console.log("students left over:" + studentsLeft);
+console.log("counties in the last week" + countiesVisit);
 
 console.log("--- Task 6 ---");
 // ---------------------------------------------------------------------
@@ -140,10 +140,10 @@ console.log("--- Task 6 ---");
 //    200250
 //    450
 // ---------------------------------------------------------------------
-const tea="200"
-const coffe="250"
-console.log(tea+coffe)
-console.log(250+200)
+const tea = "200";
+const coffe = "250";
+console.log(tea + coffe);
+console.log(250 + 200);
 // =====================================================================
 //  PART C · COMPARING (every answer is true or false)
 // =====================================================================
@@ -167,6 +167,14 @@ console.log("--- Task 7 ---");
 //  EXPECTED OUTPUT:
 //    true  false  false  true  true  false  true  true   (one per line)
 // ---------------------------------------------------------------------
+console.log(10 > 5); // true
+console.log(7 === "7"); //  false
+console.log("meru" === "meru"); //true
+console.log(18 >= 18); //true
+console.log(100 !== 99); //true
+console.log(5 > 3 && 2 > 4); //false
+console.log(5 > 3 || 2 > 4); //true
+console.log(20 % 2 === 0); //true
 
 // =====================================================================
 //  PART D · DECISIONS WITH if / else
@@ -185,6 +193,12 @@ console.log("--- Task 8 ---");
 //  EXPECTED OUTPUT (voterAge = 17):
 //    Too young to vote. Wait 1 more year(s).
 // ---------------------------------------------------------------------
+let voterAge = 17;
+if (voterAge >= 18) {
+  console.log("you can register to vote");
+} else {
+  console.log("too young to vote.wait 1 more years");
+}
 
 console.log("--- Task 9 ---");
 // ---------------------------------------------------------------------
@@ -196,6 +210,14 @@ console.log("--- Task 9 ---");
 //  EXPECTED OUTPUT:
 //    37 is odd
 // ---------------------------------------------------------------------
+
+const number = 37;
+
+if (number % 2 == 0) {
+  console.log("even");
+} else {
+  console.log("odd");
+}
 
 console.log("--- Task 10 ---");
 // ---------------------------------------------------------------------
@@ -209,6 +231,20 @@ console.log("--- Task 10 ---");
 //  EXPECTED OUTPUT (mark = 68):
 //    Mark 68 = Grade B
 // ---------------------------------------------------------------------
+const mark = 68;
+let grade;
+if (mark >= 80) {
+  grade = "A";
+} else if (mark >= 60) {
+  grade = "B";
+} else if (mark >= 50) {
+  grade = "C";
+} else if (mark >= 40) {
+  grade = "D";
+} else {
+  grade = "E";
+}
+console.log("mark " + mark + "= grade" + grade);
 
 console.log("--- Task 11 ---");
 // ---------------------------------------------------------------------
@@ -227,6 +263,19 @@ console.log("--- Task 11 ---");
 //  EXPECTED OUTPUT (8 km, student):
 //    Your fare is KSh 40
 // ---------------------------------------------------------------------
+const distance = 8;
+const isStudent = true;
+if (distance <= 5) {
+  fare = "50";
+} else if (distance <= 10) {
+  fare = "80";
+} else {
+  fare = 120;
+}
+if (isStudent) {
+  fare = fare / 2;
+}
+console.log("your fare is ksh ", +fare);
 
 console.log("--- Task 12 ---");
 // ---------------------------------------------------------------------
@@ -240,6 +289,19 @@ console.log("--- Task 12 ---");
 //  EXPECTED OUTPUT (temperature = 28):
 //    Warm and pleasant. Enjoy your day!
 // ---------------------------------------------------------------------
+const temperature = 28;
+if (temperature > 30) {
+  advice = "very hot!Drink plenty of water";
+} else if (temperature >= 20) {
+  advice = "warm and pleasant.Enjoy your day!";
+} else if (temperature >= 10) {
+  advice = "cool.carry a sweater";
+} else {
+  ("cold! Wear a jacket");
+}
+console.log(
+  "temperature =" + temperature + " warm and pleasant.Enjoy your day",
+);
 
 // =====================================================================
 //  PART E · FIX THE BUGS                                      (10 min)
@@ -261,17 +323,17 @@ console.log("--- Task 12 ---");
 
 console.log("--- Part E ---");
 
-// const shirt = 700;
-// const socks = "500";
-// const orderTotal = shirt + socks;
-// Console.log("Order total: KSh " + orderTotal);
-//
-// const discount = 0;
-// if (orderTotal = 1000) {
-//   discount = orderTotal * 10 / 100;
-//   console.log("You get a discount of KSh " + discount);
-//
-// console.log("You pay KSh " + (orderTotal - discount));
+const shirt = 700;
+const socks = 500;
+const orderTotal = shirt + socks;
+console.log("Order total: KSh " + orderTotal);
+
+let discount = 0;
+if (orderTotal >= 1000) {
+  discount = (orderTotal * 10) / 100;
+}
+console.log("You get a discount of KSh " + discount);
+console.log("You pay KSh " + (orderTotal - discount));
 
 // =====================================================================
 //  STRETCH TASKS (fast finishers)
